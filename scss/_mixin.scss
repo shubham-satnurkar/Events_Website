@@ -1,0 +1,140 @@
+@mixin flexbox {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+@mixin heading {
+    font-family: $mont-semi-bold;padding-bottom: 15px; position: relative;
+    font-size: 1.75rem; color: #2F242C;
+    &::before{
+        content: "";position: absolute;
+        width: 50px;height: 4px;background-color: $btn-color;bottom: 0;
+        border-radius: 4px;left: 0;
+    }
+    &::after{
+        content: "";position: absolute;
+        width: 25px;height: 4px;background-color: $btn-color;bottom: 0;
+        border-radius: 4px; left: 55px;
+    }
+}
+
+@mixin view-all {
+    color: $btn-color; font-family: $mont-semi-bold;
+    text-transform: uppercase; font-size: 1rem;
+}
+
+@mixin event-heading {
+    @include flexbox; justify-content: space-between; margin-bottom: 20px;
+    // .heading{
+    //     font-family: $mont-semi-bold;padding-bottom: 15px; position: relative;
+    //     font-size: 1.75rem;
+    //     &::before{
+    //         content: "";position: absolute;
+    //         width: 50px;height: 4px;background-color: $btn-color;bottom: 0;
+    //         border-radius: 4px;left: 0;
+    //     }
+    //     &::after{
+    //         content: "";position: absolute;
+    //         width: 25px;height: 4px;background-color: $btn-color;bottom: 0;
+    //         border-radius: 4px; left: 55px;
+    //     }
+    // }
+    // .view-all{
+    //     color: $btn-color; font-family: $mont-semi-bold;
+    //     text-transform: uppercase; font-size: 1rem;
+    // }
+}
+
+@mixin like-heart {
+    position: absolute;bottom: -20px; right: 10px;
+    width: 45px;height: 45px;background-color: $white;
+    box-shadow: 0 3px 6px rgba($black, .4);
+    @include flexbox; border-radius: 50%;
+    cursor: pointer;
+}
+
+@mixin thumbnail {
+    width: 100%;position: relative; @include flexbox; flex-direction: column;
+}
+
+@mixin share-btn {
+    position: absolute;bottom: -70px;
+    right: 10px;
+}
+
+@mixin event-cards {
+    border-radius: 10px 10px 0 0; overflow: hidden; height: 100%;
+    border: none; 
+}
+
+@mixin event-cards-body {
+    padding: 15px 65px 10px 15px;
+    .card-title{
+        font-size: 1rem;line-height: 25px;
+        font-family: $mont-semi-bold; 
+        margin: 10px 0;
+    }
+    .card-subtitle, .card-text{ 
+        font-size: .75rem;line-height: 22px;
+        font-family: $mont-semi-bold;
+        color: $btn-color;
+    }
+}
+
+@mixin btn {
+    padding: 10px 40px;
+    border-radius: 50px; color: $btn-color;
+    font-size: 1rem; font-family: $mont-semi-bold;
+    
+    &:hover{
+        background-color: $btn-color;color: $white;
+        box-shadow: 0 5px 10px rgba($btn-color, .5);
+    }
+    &:focus{
+        outline: none;box-shadow: 0 5px 10px rgba($btn-color, .5);
+    }
+}
+
+@mixin social-icon {
+    color: $white;font-size: 1.5rem;
+    &:hover{color:$btn-color;}
+}
+
+.like{
+    .thumbnail{
+        .like-cir{
+            .heart{visibility: hidden;}
+        }
+    }
+}
+
+
+@mixin divider {
+    @include flexbox;
+    hr{width: 45%;color: #C8C7CC;border-width: 2px;}
+    span{font-size: .875rem;color: #96969B; font-family: $mont-med;}
+}
+
+
+@mixin breadcrumb {
+    display: flex;
+    flex-direction: column; justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    .breadcrumb{
+        margin-bottom: 0;padding-left: 0;;
+        background-color: transparent;
+        &-item, .link{
+            font-size: 1rem; font-family: $mont-semi-bold;
+            color: $black;
+
+        }
+    }
+    .count{
+        font-size: 1rem; font-family: $mont-med;
+        span{color: #96969B;font-size: .875rem;}
+    }
+}

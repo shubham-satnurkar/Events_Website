@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59" height="59" viewBox="0 0 59 59">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="_Color" data-name="↳🎨 Color" d="M7.293,11.707a1,1,0,0,1,0-1.414L10.586,7H1A1,1,0,0,1,1,5h9.586L7.293,1.707A1,1,0,0,1,8.708.293l5,5h0l.035.037h0l.017.019h0l.015.018v0l.014.018v0l.014.018v0l.014.019h0a1,1,0,0,1-.133,1.3L8.708,11.707a1,1,0,0,1-1.415,0Z" fill="#fff" stroke="#fff" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Button_Large_Fill_Only_Icon_Copy" data-name="Button/Large/Fill/Only Icon Copy" transform="translate(0.5 0.5)">
+    <g id="Base_Layout" data-name="Base / Layout">
+      <rect id="Base" width="58" height="58" rx="29" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <g id="Icon" transform="translate(22 23)">
+      <path id="_Color-2" data-name="↳🎨 Color" d="M7.293,11.707a1,1,0,0,1,0-1.414L10.586,7H1A1,1,0,0,1,1,5h9.586L7.293,1.707A1,1,0,0,1,8.708.293l5,5h0l.035.037h0l.017.019h0l.015.018v0l.014.018v0l.014.018v0l.014.019h0a1,1,0,0,1-.133,1.3L8.708,11.707a1,1,0,0,1-1.415,0Z" fill="#fff" stroke="#fff" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

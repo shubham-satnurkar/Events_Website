@@ -1,0 +1,1959 @@
+@import 'mixin';
+@import 'variables';
+
+// Header Section Srart
+.header{
+    width: 100%; box-shadow: 0 5px 10px rgba($head-color, .4);
+    background-color: $head-color; padding: 10px 0;
+    .navbar{
+        .navbar-toggler{
+            background-color: $head-color; 
+            padding: .25rem .5rem; border: 1px solid $logo-color;
+            .navbar-toggler-icon{
+                background-image: url(../img/svg-icon/list.svg);
+            }
+        }
+        .navbar-collapse{
+            z-index: 1111111;
+            .form{
+                width: 60%;
+                background-color: $white; padding: 5px 5px 5px 20px;
+                border-radius: 32px;
+                .label{
+                    margin: 0;font-size: .875rem;
+                    font-family: $mont-semi-bold;
+                }
+                .form-control{
+                    padding: 0;height: 20px;border: none;
+                    font-size: .78rem; box-shadow: none;
+                    font-family: $mont-med;
+                    &::placeholder{color: $placeholder-color; }
+                }
+                .btn-search{
+                    @include flexbox;
+                    background-color: $btn-color;border-radius: 50%;
+                    padding: 11px 12px;   
+                }
+            }
+
+            .navbar-nav{
+                .nav-item{
+                    margin: 0 5px; position: relative;
+                    .nav-link{
+                        @include flexbox; flex-direction: column;  
+                        color: $white; font-size: .875rem;
+                        font-family: $mont-med;
+
+                        .icons{margin-bottom: 5px;}
+
+                        &:hover{color: $btn-color;}
+                    }
+                    &:last-child{
+                        .nav-link{
+                            display: block;
+                            .profile{
+                                display: block; margin: auto;
+                                width: 30px;height: 30px;border-radius: 50%;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                    #likeCount{
+                        position: absolute;top: 5px;right: 5px;
+                        color: $btn-color;font-family: $mont-semi-bold;
+                    }
+                    &.notify{ 
+                        position: relative;
+                        #notificationCount{
+                            position: absolute;top: 5px;right: 25px;
+                            color: $btn-color;font-family: $mont-semi-bold;
+                        }
+                        
+                        .notification-toggle{
+                            width: 300%; padding: 10px 5px;
+                            height: 250px;
+                            position: absolute; z-index: 1000;
+                            top:100%; left: -120px;
+                            background-color: $head-color;
+                            box-shadow: 0 0 5px rgba($black, .5);
+                            overflow-y: auto; display: none;
+                            &::-webkit-scrollbar {
+                                width: 5px; 
+                              }
+                            &::-webkit-scrollbar-thumb {
+                                background: $btn-color;
+                            }
+                            .list-item{
+                                padding: 5px 10px;
+                                color: $white;
+                                font-size: .875rem;
+                                font-family: $mont-med;
+                                margin-bottom: 5px;
+                                cursor: pointer;
+
+                                &:hover{color: $btn-color;}
+                            }
+                        }
+                    }
+
+                }
+                
+                &>.signIn{
+                    .nav-link{
+                        font-size: 1rem; font-family: $mont-semi-bold;
+                    }
+                }
+                &>.signup{
+                    .btn{
+                        @include btn; padding: 13px 40px;
+                        border: 1px solid $btn-color;
+                        
+                         border-radius: 32px;
+                    }
+                }
+                .dropdown-menu{
+                    position: absolute;left: -90px;right:-5px;
+                    background-color: $head-color;box-shadow: 0 0 5px rgba($black, .5);
+                    .dropdown-item{
+                        padding: 5px 10px; color: $white;
+                        font-size: .875rem; font-family: $mont-med;
+                        &:hover{color: $btn-color;background-color: transparent;}
+                    }
+                }
+            }
+        }
+
+    }
+}
+// Header Section End
+
+// Hero Slider Section Start
+.hero-slider{
+    padding-top: 130px; width: 100%; 
+    .myslider{
+        .slide{width: 100%;border-radius: 5px;}
+        
+    }
+}
+
+// Book Events Now Sectiion Start
+.book-events{
+    background-color: $logo-color;
+    .book-heading{
+        padding-top: 120px;
+        .main-heading{
+            font-size: 3.5rem; color: $white;
+            font-family: $mont-med;
+        }
+        .sub-heading{
+            font-size: 1rem; color: $white;
+            font-family: $mont-semi-bold;
+        }
+        .store-btn{
+            margin: 50px 0; display: flex; gap: 25px;
+        }
+    }
+    .iphone{
+        margin: 50px 0 -320px;;
+    }
+}
+// Book Events Now Sectiion End
+
+// Hero Slider Section End
+
+// Event Category Section Start
+.event-category{
+    padding: 50px 0;
+    .category-block{padding: 0 10px;}
+    .event-heading{
+        @include event-heading;
+        .heading{@include heading;}
+        .view-all{@include view-all;}
+    }
+
+    .card{
+        background-color: $card-color;color:$white; padding: 15px 0;
+        border-radius: 10px; cursor: pointer; height: 100%;
+        .card-body{
+            .card-title{font-size: 1.5rem;font-family: $mont-med;line-height: 36px;}
+            .card-subtitle{font-size: .75rem;font-family: $mont-med;margin: 10px 0 20px;}
+            .btn{
+                background-color: rgba($white, .5);border-radius: 50%;
+                padding: 5px 10px;
+                .bi{font-size: 1.375rem;color: rgba($logo-color, .5);font-weight: bolder;}
+            }
+        }
+        .cat-img{
+            position: absolute; right: 10px; bottom: 10px;width: 55%;
+        }
+        &:hover{ box-shadow: 0 5px 10px rgba($head-color, .4);}
+        &:hover .btn{
+            background-color: rgba($white, 1);
+            .bi{color: rgba($logo-color, 1);}
+        }
+    }
+}
+// Event Category Section End
+
+
+// Popular, Recommended, Nearby, Featrued,  Events Section Start
+.popular-event, .recommended-event, .nearby-event, .featured-event ,.card-events{
+    padding: 0 0 50px;
+    .event-heading{
+        @include event-heading;
+        .heading{@include heading;}
+        .view-all{@include view-all;}
+    }
+    .card{
+        @include event-cards; cursor: pointer;
+
+        .thumbnail{
+           @include thumbnail;
+            .like-cir{
+                @include like-heart;
+                .heart{position: absolute;z-index: 1;}
+                .heart-fill{position: absolute;}
+            }
+            .share-btn{
+                @include share-btn;
+            }
+        }
+        .card-body{
+            @include event-cards-body;
+        }
+        &:hover{box-shadow: 0 0 10px rgba($btn-color, .4);}
+    }
+}
+// Popular, Recommended, Nearby, Featrued,  Events Section End
+
+// Featured Organizers Section Srart
+
+.featured-organizers{
+    padding: 0 0 50px;
+    .event-heading{
+        @include event-heading;
+        .heading{@include heading;}
+        .view-all{@include view-all;}
+    }
+    .alert{padding:0 8px;margin-bottom: 20px;}
+    .card{
+        text-align: center; border: 1px solid rgba(0,0,0,.125);
+        padding: 50px 0; cursor: pointer; border-radius: 10px;
+        height: 100%;
+        .cir{
+            width: 60px;height: 60px;border: 1px solid rgba($black, .5);
+            border-radius: 50%;margin: 20px auto; 
+            overflow: hidden; background-color: #EAEAEA;
+        }
+
+        .card-body{
+            padding: 0 15px;
+            .card-title{
+                font-size: 1rem; font-family: $mont-semi-bold;
+                line-height: 25px;
+            }
+            .card-text{
+                color: $faded-color;font-family: $mont-med;
+                margin-bottom: 50px;
+            }
+
+            .btn-follow{
+                @include btn;
+                position: absolute; bottom: 10%;
+                left: 23%;
+                border: 1px solid $btn-color; 
+            }
+        }
+        .close{
+            position: absolute;top: 15px;right: 15px;
+            font-size: 2rem; font-weight: normal;
+        }
+        &:hover{
+            box-shadow: 0 0 5px rgba($black, .5);
+        }
+        
+    }
+}
+// Featured Organizers Section End
+
+// Footer Section Start
+.footer{
+    background-color: $head-color;
+    padding: 50px 0; position: relative; z-index: 1;
+    .about{
+        .img-fluid{width: 50%;}
+    }
+    .foot-heading{
+        font-size: 1rem; color:$white; font-family: $mont-semi-bold;
+        margin: 22px 0;
+    }
+    .btn{
+        @include btn;background-color: $btn-color;
+        color: $white;
+    }
+    .quick-links{
+        .foot-link{
+            .list-item{
+                .nav-link{
+                    padding: 2px 0; color: $foot-link-color;
+                    font-family: $mont-med; font-size: .875rem;
+                    &:hover{
+                        color: $btn-color;
+                    }
+                }
+            }
+        }
+    }
+    .get-in-touch{
+        .contact-link{
+            display: flex; font-size: .875rem;
+            margin-bottom: 10px; color: $foot-link-color;
+            font-family: $mont-med;
+            .bi{margin-right: 15px;color: $btn-color;}
+            &:hover{color: $btn-color;}
+        }
+    }
+    .follow-us{
+        .social{
+            .icon{
+                @include social-icon;
+            }
+        }
+    }
+    .store-btn{display: flex;gap: 10px;flex-wrap: wrap;}
+}
+// Footer Section End
+
+// Scroll To Top Btn
+.scroll-top-btn{
+    position: fixed; right: -100px; bottom: 20px;
+    background-color: rgba($btn-color, 1);
+    padding: 10px 15px; border-radius: 50%;
+    .bi{font-size: 1.625rem;color: $white;}
+    transition: .5s; z-index: 100000000;
+}
+.scroll-top-btn{
+    &.show{
+        right: 20px;
+    }
+}
+
+// Home Page End
+
+
+// My Profile Page Start
+.myprofile{
+    padding: 150px 0 30px;
+    .tab-content{
+        .tab-pane{
+            .profile{
+                &.signUp{background-color: unset;height: unset;}
+                .form-sec{
+                    padding: 0 20px;
+                    .form{ 
+                        width: 99%;
+                        .form-group{
+                            label{
+                                left: 25px;color: $black;                
+            
+                            }
+                            .form-control{
+                                background-color: $input;
+                                padding-left: 20px; color: $black
+                            }
+                        }
+                        .heading{
+                            font-size: 1rem; font-family: $mont-semi-bold;
+                            .btn-link{
+                                color: $btn-color; padding: 0 5px;
+                                font-size: .875rem;font-family: $mont-semi-bold;
+                                text-decoration: none;
+                                &:focus{box-shadow: none;}
+                            }
+                        }
+                        #upBtns{
+                            .btn{
+                                @include btn;
+                                background-color: transparent;
+                                border: 1px solid $btn-color;
+                                color: $btn-color
+
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+// My Profile Page End
+
+// View All Event Pages start
+.events-page{
+    .bread{
+        @include breadcrumb;
+    }
+    .row{row-gap: 10px;}
+    .card-events{padding-top: 50px;}
+
+    .all-events{
+        .nav-item{
+            .nav-link{
+                border: 1px solid $pills-border;
+                margin: 0 8px; border-radius: 25px;
+                padding: 10px 15px; font-size: 1rem;
+                color: $black; font-family: $mont-semi-bold;
+            }
+        }
+        
+        .nav1{
+            @include flexbox; justify-content: space-between; align-items: center;
+            margin-bottom: 19px; padding-right: 10px;
+            .nav-item{
+                &:first-child{padding-left: 25px;}
+            }
+            .nav-link{
+                border-color:transparent;
+                &.clear{color: $btn-color;}
+            }
+            
+        }
+        .nav-pills{
+            flex-wrap: nowrap;
+            .nav-link{
+                color: $pills-text;
+                &.active{
+                    background-color: $white;
+                    color: $black;
+                    box-shadow: 0px 0px 3px rgba($black, .5);
+                }
+                .input-group{
+                    margin-bottom: 8px;
+                    .form-control{
+                        padding: 20px 30px;
+                        border-radius: 10px;
+                    }
+                    .btn{
+                        position: absolute;top: 0; left:0px;z-index: 10;
+                        &:focus{box-shadow: none;outline: none;}
+                    }
+                }
+            }
+            .location{
+                width: 44%;
+                @include flexbox; justify-content: flex-end;
+                .dropdown, .show{
+                    .nav-link{display: flex; justify-content: space-between; align-items: center;
+                        gap: 5px;
+                        border: none;background-color: transparent;
+                        color: $black; position: relative;
+                        .bi{color: $btn-color;}
+                        &.dropdown-toggle::after{
+                            content: url('../img/svg-icon/arrow-down.svg'); 
+                            border: unset;margin: 5px 0 0 0;
+                        }
+                    }
+                }
+                .btns{
+                    display: flex;
+                    .btn{
+                        border: 1px solid $pills-border;
+                        border-radius: 0; padding: 3px 9px;
+                        .bi{font-size: 1.5rem;}
+                        &:focus{color:$btn-color;box-shadow: none;border-color: $btn-color;}
+                        &.active{
+                            border: 1px solid $btn-color;
+                            .bi{color: $btn-color;}
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+
+        // All Category Cards Section Side Bar
+        .side-bar{
+                
+            .side-data{ padding-left: 48px; border-top: 1px solid $border;
+                .side-title{
+                    font-size: 1rem;font-family: $mont-semi-bold;
+                }
+                .btn-group{
+                    flex-wrap: wrap; 
+                    .btn{
+                        padding: 8px 30px;width: auto; flex: 0 0 auto;
+                        margin: 10px 15px 0 0;border-radius: 25px;
+                        border: 1px solid $pills-border;box-shadow: none;outline: none;
+                        font-size: .875rem; font-family: $mont-semi-bold;
+                        &:focus{
+                           box-shadow: none;outline: none;
+                        }
+                        &.active,&.focus{border: 1px solid $btn-color;color: $btn-color;} 
+                    }
+                }
+                .form-check{
+                    font-size: .874rem;font-family: $mont-semi-bold;color: $black; margin-top: 15px;
+                    input[type="radio"] {
+                        accent-color: red;
+                    }
+                    input[type ="checkbox"]:checked {
+                        accent-color: $btn-color;color:$white;
+                    }
+                    
+                }
+                .link{
+                    .view-link{font-size: .875rem; color: $btn-color;font-family: $mont-semi-bold;}
+                }
+            }
+            #sideBar-toggle{
+              color: $black; border: 1px solid rgba($btn-color, .7);
+               padding: 2px 8px; display: none;
+               .bi{font-size: 1.375rem;}
+               &:hover, &:focus{ 
+                   background-color: $btn-color;color: $white;box-shadow: 0px 0px 3px rgba($btn-color, .5);
+                }
+            }
+        }
+
+        // All Category Cards Section Main Bar
+        .main-bar{
+            .tab-content{
+                border-top: 1px solid $border; border-left:1px solid $border;
+                padding-right: 30px;
+                .tab-pane{
+                    .card{height: 100%;
+                        border-radius: 10px; cursor: pointer;
+                        margin-bottom: 5px;
+                        .card-content{
+                            .card-body{
+                                .card-title{
+                                    font-size: .75rem; color: $logo-color;
+                                    font-family: $mont-semi-bold;
+                                    margin-bottom: 10px;
+                                    &:last-child{
+                                        font-size: 1rem;;color: $black;
+                                        font-family: $mont-bold;
+                                        .dicount{
+                                            color: $rate-color;margin-left: 3px;
+                                            font-size: .75rem;font-family: $mont-semi-bold;
+                                        }
+                                    }
+                                }
+                                .card-text{
+                                    font-size: 1rem; font-family: $mont-med;
+                                    margin-bottom: 5px; 
+                                }
+                                .rate-text{
+                                    margin-bottom: 30px;
+                                    .rate{
+                                        margin-top: 10px;
+                                        font-size: .6rem;background-color: $rate-color;
+                                        color: $white; padding: 4px 7px;border-radius: 5px;
+                                        cursor: pointer;vertical-align: middle;
+                                    }
+                                    .text-muted{font-size: .5rem;}
+                                }
+                                
+                            }
+                        }
+                        .card-img{
+                            @include flexbox;
+                        }
+                        &:hover{box-shadow: 0px 0px 5px rgba($btn-color, .4);}
+                    }
+                    .load{
+                        .load-link{
+                            font-size:1rem; color:$black;
+                            padding:20px 0; font-family:$mont-semi-bold;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+// View All events Page End
+
+
+
+// Organizers-info Page start
+.organizers-info, .myprofile{
+    padding-top: 130px;
+    .head-sec{
+        .card{
+            border-radius: 10px;
+            .card-body{
+                padding: 70px 40px 20px;
+                position: relative; @include flexbox; justify-content: space-between;
+                .card-title{
+                    font-size: 1.5rem; font-family: $mont-semi-bold; margin-bottom: 8px;
+                }
+                .card-text{
+                    display: flex;flex-direction: column;gap: 5px;
+                    font-size:1rem; font-family:$mont-semi-bold;
+                    color: $faded-color;
+                }
+                .btns{ margin-top: 20px;
+                    .btn{
+                        @include btn; border: 1px solid $btn-color;
+                    }
+                }
+            }
+            .logo{
+                position: absolute;top: -100px;left: 40px;text-align: center;
+                border: 1px solid $pills-text ; border-radius: 50%;
+                width: 12.5%; overflow: hidden;
+            }
+        }
+    }
+
+    // Information and Events Tab
+    .info-tabs{
+        padding: 20px 20px 0; 
+        // tab pills and buttons
+        .nav-pills{ 
+            gap: 10px;margin-bottom: 15px;
+            .nav-link{
+                font-size: 1rem; color: $pills-text; font-family: $mont-semi-bold;
+                padding: 10px 25px; border: 1px solid $pills-border; border-radius: 25px;
+
+                &.active{background-color: transparent;border-color: $btn-color;color: $btn-color;}
+            }
+        }
+
+        // tab contents
+        .tab-content{
+            margin-top: 10px;
+            .tab-pane{
+                &.card-events{padding-bottom: 20px;}
+                // About
+                .info-text{
+                    font-size: 1rem; color: $faded-color; font-family: $mont-med;
+                    line-height: 26px; margin-bottom: 20px; text-align: justify;
+                }
+
+            }
+        }
+        
+    }
+}
+// Organizers-info Page End
+
+
+
+
+// Sign Up Page Start
+.signUp{ 
+    height: 100vh;
+    // background-color: $head-color;
+    .bg-img-sec{
+        width: 37.4%; flex:  0 0 37.4%; position:relative;
+        .back{margin: 0;
+            .caption{
+                position: absolute; top: 10%; left: 30%;
+                padding-right: 50px;
+                .logo-img{width: 40%;}
+                .title{
+                    font-size: 1.5rem; color: $white;
+                    margin-top: 20px; font-family: $mont-bold;
+                }
+            }
+        }
+        
+    }
+    .form-sec{
+        padding: 30px 50px 0;
+        .logo-link{
+            margin: 0 30px 25px 0;@include flexbox;
+            justify-content: space-around;
+            .logo-img{visibility: hidden;}
+        }
+        .top-link{
+            text-align: right;margin: 0;
+            color: $black; font-family: $mont-semi-bold;
+            .link{color: $logo-color;}
+        }
+        .booket{
+            width: 90%;
+            .heading{
+                font-size: 1.5rem; font-family: $mont-bold; 
+                margin-bottom: 15px;
+            }
+            .signUp-mode{
+                @include flexbox; justify-content: flex-start; gap: 15px;
+                .btn{
+                    @include btn; vertical-align: middle; padding: 12px 60px;
+                    width: 75%;
+                    background-color: $google-btn; color: $white;
+                    &:hover{
+                        background-color: $google-btn; box-shadow: 0 5px 10px rgba($google-btn, .5);
+                    }  
+                }
+                .link{
+                    background-color: #EAEAEA;  border-radius: 50%;
+                    padding: 12px 20px;
+                    .fb{display: none;}
+                    &:hover{
+                        background-color: $google-btn; box-shadow: 0 5px 10px rgba($google-btn, .5);
+                    } 
+                    &:hover .img-fluid{display: none;}
+                    &:hover .fb{display: block;}
+                }
+            }
+            .varify{
+                .verify-heading{
+                   color: $faded-color;margin-bottom: 10px;
+                }
+                .back-link{
+                    font-size: 1rem; color: $black;font-family: $mont-semi-bold;
+                    margin-bottom: 50px;
+                    .bi{font-size: 1.25rem}
+                    &:hover{color: $btn-color}
+                }
+            }
+        }
+        .divider{@include divider;width: 90%;margin: 20px 0;}
+
+        .form{
+            width: 90%; 
+            .form-group{position: relative; margin-bottom: 20px;
+                label{
+                    position: absolute; top: 20px;
+                    left: 50px; font-size: 1rem;
+                    font-family: $mont-semi-bold;
+                    color: #C8C7CC; transition: 1s;                   
+                }
+                .name-label{left: 25px;}
+                .form-control{
+                    height: 58px; border-radius: 10px;  padding-left: 50px;
+                    border: 1px solid #EAEAEA; 
+                    font-size: 1rem; font-family: $mont-semi-bold;
+                    &::placeholder{position: absolute;top: 25px;}
+                    &:focus{border: 1px solid $btn-color;box-shadow: none;} 
+
+                    &.name{padding-left: 20px;}
+                }
+                .bi{position: absolute;top: 15px;left: 20px;font-size: 1.25rem;color:#C8C7CC}
+                .btn{
+                    @include btn;background-color: $btn-color;
+                    color: $white; padding: 15px 30px; border-radius: 30px;
+                }
+            }
+            .forget-link{
+                font-size: 1rem;font-family: $mont-semi-bold;
+                color: $btn-color;margin-bottom: 30px;display: block;
+            }
+            .focused{ 
+                .form-label {
+                top: 5px;font-size: .6rem;
+                color: $pills-text;
+              }
+              .name-label{color: $btn-color;}
+            }
+        }
+    }
+}
+// Sign Up Page End
+
+
+
+
+
+
+
+
+
+// Media Query Start
+
+@media screen and (max-width:1080px){
+    // Header section
+    .header .navbar .navbar-collapse .navbar-nav .nav-item{margin: 0;}
+
+    // Featured organizers section
+    .featured-organizers .card .card-body .btn-follow{left: 15%;}
+
+    // Organizers-info Page start
+    .organizers-info, .myprofile{
+        .head-sec .card .logo{top: -70px;}
+    }
+    // Organizers-info Page End
+
+    // All event page start
+    .events-page{
+        .all-events{
+            .nav-item{
+                .nav-link{
+                    margin: 0 4px; border-radius: 22px;
+                    padding: 8px 12px; font-size: .9rem;
+                }
+            }
+            .nav1{
+                .nav-item{
+                    &:first-child{padding-left:0px;}
+                } 
+            }
+            .nav-pills{
+                flex-wrap: nowrap;
+                .nav-link{
+                    
+                    .input-group{
+                        margin-bottom: 8px;
+                        .form-control{
+                            padding: 20px 30px;
+                            border-radius: 10px;
+                        }
+                        .btn{
+                            position: absolute;top: 0; left:0px;z-index: 10;
+                            &:focus{box-shadow: none;outline: none;}
+                        }
+                    }
+                }
+                .location{
+                    width: 44%; 
+                    flex-wrap: nowrap;
+                    .dropdown, .show{
+                        .nav-link{
+                            display: flex; justify-content: space-between; align-items: center; 
+                        }
+                    }
+                    .btns{
+                        .btn{
+                             padding: 3px 9px;
+                            .bi{font-size: 1.25rem;}
+                            
+                        }
+                    }
+                }
+                
+            }
+            .side-bar{
+                .side-data{
+                    padding-left: 20px;
+                }
+            }
+            .main-bar{
+                .tab-content{padding-right: 0;}
+            }
+        }
+    }
+    // All event page start
+}
+
+
+// Media Query for Laptop, Desktop
+@media screen and (max-width:991px) {
+    // Header section start
+    .header{
+        padding: 0;
+        .navbar {
+
+            .navbar-collapse{
+                position: fixed;
+                top: 75px;
+                right: 0;
+                padding-left: 30px;
+                padding-right: 15px;
+                padding-bottom: 15px;
+                width: 75%;
+                height: 100%; overflow: auto;
+                background-color: $head-color;
+                padding-top: 30px;
+
+                &.collapsing {
+                    right: -100%;
+                    transition: height 0s ease;
+                }
+                &.show {
+                    right: 0;
+                    transition: right 300ms ease-in-out;
+                }
+    
+                .form{width: 100%}
+                .navbar-nav{ 
+                    padding: 20px 15px;
+                    .nav-item{
+                        .nav-link{
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            flex-direction: row; gap: 10px; 
+                            // .icons{margin-right: 10px;} 
+                            
+                        }
+                        &:nth-child(2){
+                            .link-text{margin-left: 5px;}
+                        }
+                        &:nth-child(3){
+                            .link-text{margin-left: 10px;}
+                        }
+                        &:last-child{
+                            .nav-link{
+                                .profile{
+                                    display: inline-block;
+                                }
+                                .link-text{margin-left: 8px;}
+                            }
+                        }
+
+                        &.notify{ 
+                            
+                            #notificationCount{
+                                top: 5px;right: 5px;
+                            }
+                            .notification-toggle{
+                                width: 100%; height: 200px;
+                                top:100%; left: 0px;
+                            }
+                        }
+
+                    }
+                    .dropdown-menu{
+                        left: 0;right:0;
+                       
+                        .dropdown-item{
+                            padding: 5px 10px; color: $white;
+                            font-size: .875rem; font-family: $mont-med;
+                            &:hover{color: $btn-color;background-color: transparent;}
+                        }
+                    }
+                }
+            } 
+        }
+        .navbar-toggler.collapsed ~ .navbar-collapse {
+            transition: right 500ms ease-in-out;
+        }
+        
+    } 
+    // Header section End
+
+    // Book Events Now Sectiion Start
+    .book-events{
+        .book-heading{
+            padding-top: 80px;
+            .main-heading{
+                font-size: 2.25rem;
+            }
+            .store-btn{
+                margin: 30px 0;
+            }
+        }
+        .iphone{
+            margin: 50px 0 -250px;;
+        }
+    }
+    // Book Events Now Sectiion End
+
+    // Event Category Section Start
+    .event-category{
+        .event-heading{
+            .heading{font-size: 1.5rem}
+        }
+        .card{
+            .card-body{
+                .card-title{font-size: 1.375rem;line-height: 32px;}
+            }
+        }
+    }
+    // Event Category Section End
+
+
+    // Popular, Recommended, Nearby, Featrued,  Events Section Start
+    .popular-event, .recommended-event, .nearby-event, .featured-event{
+        .event-heading{
+            .heading{ font-size: 1.5rem;}            
+        }
+        .card{    
+            .card-body{
+                @include event-cards-body; 
+                padding: 15px 60px 10px 15px;
+                .card-title{font-size: 1rem;line-height: 23px;}
+            }
+        }
+    }
+    // Popular, Recommended, Nearby, Featrued,  Events Section End
+    
+
+    // Featured Organizers Section Srart
+    .featured-organizers{
+        .event-heading{
+            .heading{font-size: 1.5rem}
+        }
+        .card{
+            .card-body{
+                .btn-follow{
+                   left: 22%;;  
+                }
+            }
+        }
+    }
+    // Featured Organizers Section End
+
+    // View All Event Pages
+    // .events-page{padding-top: 50px;}
+
+    // All event page start
+    .events-page{
+        .all-events{
+            .nav-item{
+                margin-bottom: 10px;
+                .nav-link{
+                    margin: 0 4px; border-radius: 22px;
+                    padding: 10px 25px; font-size: 1rem;
+                }
+            }
+            .nav1{
+                // flex-direction: column; align-items: flex-start;
+                .nav-item{
+                    &:nth-child(2){padding-right:10px;}
+                    .nav-link{padding-left: 15px;}
+                } 
+
+            }
+            
+            .nav-pills{
+                flex-wrap: wrap;
+                .nav-link{
+                    
+                    .input-group{
+                        margin-bottom: 8px;
+                        .form-control{
+                            padding: 20px 30px;
+                            border-radius: 10px;
+                        }
+                        .btn{
+                            position: absolute;top: 0; left:0px;z-index: 10;
+                            &:focus{box-shadow: none;outline: none;}
+                        }
+                    }
+                }
+                .location{
+                    width: auto;padding-right: 20px;
+                    flex-wrap: wrap;
+                    .dropdown, .show{
+                        .nav-link{
+                            display: flex; justify-content: space-between; align-items: center; 
+                        }
+                    }
+                    .btns{
+                        .btn{
+                             padding: 3px 9px;
+                            .bi{font-size: 1.25rem;}
+                            
+                        }
+                    }
+                }
+                
+            }
+            .side-bar{
+                
+                .side-data{
+                    padding-left: 20px;
+                    .side-title{font-size: .875rem;}
+                    .btn-group{
+                        .btn{font-size: .8rem;}
+                    }
+                    .form-check{
+                        font-size: .75rem;
+                    }
+                }
+            }
+            .main-bar{
+                .tab-content{padding-right: 0;}
+            }
+        }
+    }
+    // All event page start
+
+    // Sign Up, In and activate account
+    .signUp{
+        // height: 100%;
+        background-color: $head-color; padding-bottom: 50px;
+        .form-sec{
+            padding: 30px 0;
+            .logo-link{
+                margin: 0 0 25px 0;
+                justify-content: space-between;
+                .logo-img{visibility: visible;}
+                .top-link{color: $white;}
+            }
+            .booket{
+                width: 100%;
+                .heading{
+                    color: $white
+                }
+                .signUp-mode{
+                    justify-content: center; ;
+                    .btn{
+                         padding: 12px 60px; width: auto;                        
+                    } 
+                } 
+                .varify{
+                    .verify-heading{
+                       color: $white
+                    }
+                    .back-link{
+                        color: $white;margin-bottom: 30px;
+                    }
+                }
+            }
+            .divider{width: 100%;
+                hr,span{color: $white;border-color: $pills-border;}
+            }
+            .form{
+                width: 100%;
+            }
+        }
+    }
+
+    // Organizers-info Page start
+    .organizers-info, .myprofile{
+        padding-top: 100px; 
+        .head-sec{
+            .card{
+                .card-body{
+                    padding: 50px 20px 20px;
+                    .card-title{
+                        font-size: 1.25rem;
+                    }
+                    .card-text{font-size:.80rem;}
+                    .btns{ 
+                        .btn{
+                            padding: 8px 30px; font-size: .87rem;
+                        }
+                    }
+                }
+                .logo{width: 13%;top: -80px;}
+            }
+        }
+
+        // Information and Events Tab
+        .info-tabs{
+            padding: 20px 20px 0; 
+            // tab pills and buttons
+            .nav-pills{ 
+                gap: 10px; 
+                .nav-link{
+                    font-size: .875rem; padding: 8px 20px;
+                }
+            }
+
+            // tab contents
+            .tab-content{
+                .tab-pane{
+                    &.card-events{padding-bottom: 20px;}
+                    // About
+                    .info-text{
+                        font-size: .875rem; line-height: 26px; 
+                    }
+                }
+            }
+            
+        }
+    }
+    // Organizers-info Page End
+
+}
+
+// Media Query For Tablet
+@media screen and (max-width:767px) {
+    .hero-slider{padding-top: 100px;}
+
+    // Book Events Now Sectiion Start
+    .book-events{
+        background-color: $logo-color;
+        .book-heading{
+            padding-top: 50px;
+            .main-heading{
+                font-size: 1.375rem; color: $white;
+                font-family: $mont-med;
+            }
+            .sub-heading{
+                font-size: .875rem; color: $white;
+                font-family: $mont-semi-bold;
+            }
+            .store-btn{
+                margin: 30px 0; gap: unset; text-align: left;
+                .img-fluid{width: 75%;}
+            }
+        }
+        .iphone{
+            margin: 30px 0 -300px;;
+        }
+    }
+// Book Events Now Sectiion End
+
+    // Event Category Section Start
+    .event-category{
+        .event-heading{
+            .heading{font-size: 1.25rem}
+            .view-all{font-size: .875rem}
+        }
+        .card{
+            .card-body{
+                .card-title{font-size: 1.125rem;line-height: 25px;}
+            }
+            .cat-img{
+                width: 40%;
+            }
+        }
+    }
+    // Event Category Section End
+
+    // Popular, Recommended, Nearby, Featrued,  Events Section Start
+    .popular-event, .recommended-event, .nearby-event, .featured-event{
+        .event-heading{
+            .heading{ font-size: 1.25rem;}            
+            .view-all{ font-size: .875rem;}            
+        }
+        .card{    
+            .card-body{
+                @include event-cards-body; 
+                padding: 15px 60px 10px 15px;
+                .card-title{font-size: 1rem;line-height: 23px;}
+            }
+        }
+    }
+    // Popular, Recommended, Nearby, Featrued,  Events Section End
+
+    // Featured Organizers Section Srart
+    .featured-organizers{
+        .event-heading{
+            .heading{ font-size: 1.25rem;}            
+            .view-all{ font-size: .875rem;}            
+        }
+        .card{
+            .card-body{
+                .btn-follow{
+                    position: unset;    
+                }
+            }
+        }
+    }
+    // Featured Organizers Section End
+
+    // Scroll To Top Btn
+    .scroll-top-btn{
+        padding: 5px 10px;
+        .bi{font-size: 1.375rem;color: $white;}
+    }
+
+
+    // All event page start
+    .events-page{
+        .all-events{
+            .nav-item{
+                margin-bottom: 0px;
+                .nav-link{
+                    margin: 0 4px; border-radius: 22px;
+                    padding: 10px 25px; font-size: 1rem;
+                }
+            }
+            .nav1{
+                flex-direction: row;
+                .nav-item{
+                    &:nth-child(2){padding-right:0px;}
+                    .nav-link{padding-left: 15px;}
+                } 
+            }
+            .nav-pills{
+                padding: 0 10px;
+                .nav-link{
+                    
+                    .input-group{
+                        margin-bottom: 8px;
+                        .form-control{
+                            padding: 20px 30px;
+                            border-radius: 10px;
+                        }
+                        .btn{
+                            position: absolute;top: 0; left:0px;z-index: 10;
+                            &:focus{box-shadow: none;outline: none;}
+                        }
+                    }
+                }
+                .location{
+                    width: 100%;padding-right: 00px; margin-top: 10px;
+                    justify-content: center;
+                    .dropdown, .show{
+                        .nav-link{
+                            display: flex; justify-content: space-between; align-items: center; 
+                        }
+                    }
+                    .btns{
+                        .btn{
+                             padding: 3px 9px;
+                            .bi{font-size: 1.25rem;}
+                            
+                        }
+                    }
+                }
+                
+            }
+            .side-bar{
+                .side-data{
+                    padding-left: 20px;
+                    .side-title{font-size: .875rem;}
+                    .btn-group{
+                        .btn{font-size: .8rem;}
+                    }
+                    .form-check{
+                        font-size: .75rem;
+                    }
+                }
+            }
+            .main-bar{
+                .tab-content{padding-right: 0;}
+            }
+        }
+    }
+    // All event page start
+
+
+    // Organizers-info Page start
+    .organizers-info, .myprofile{   
+        .head-sec{
+            .card{  
+                .card-body{
+                    padding: 50px 20px 20px;
+                    
+                    .card-title{
+                        font-size: 1.125rem; 
+                    }
+                    .card-text{font-size:.75rem;}
+                    .btns{ 
+                        .btn{
+                            padding: 8px 30px; font-size: .75rem;
+                        }
+                    }
+                }
+                .logo{top: -60px;left: 30px;}
+            }
+        }
+
+        // Information and Events Tab
+        .info-tabs{
+            padding: 20px 20px 0; 
+            // tab pills and buttons
+            .nav-pills{ 
+                gap: 10px; 
+                .nav-link{
+                    font-size: .8rem; padding: 6px 15px;
+                }
+            }
+
+            // tab contents
+            .tab-content{
+                .tab-pane{
+                    &.card-events{padding-bottom: 20px;}
+                    // About
+                    .info-text{
+                        font-size: .875rem; line-height: 26px; 
+                    }
+                }
+            }
+            
+        }
+    }
+    // Organizers-info Page End
+
+}
+
+// Media Query For Small Mobiles
+@media screen and (max-width:575px){
+    // Header Section start
+    .header{
+        .navbar {
+            .navbar-toggler{
+                padding: .25rem .5rem;
+                .navbar-toggler-icon{
+                    background-image: url(../img/svg-icon/list.svg);
+                    width: 1.375rem;height: 1.375rem;
+                }
+            }
+
+            .navbar-collapse{
+                padding: 30px 10px 15px; width: 90%;
+                .form{
+                    width: 100%;
+                    padding: 5px 5px 5px 15px;
+                    .label{font-size: .75rem;}
+                    .form-control{height: 15px;font-size: .7rem;;}
+                    .btn-search{
+                        padding: 8px 5px;  
+                        .img-fluid{width: 75%;} 
+                    }
+                }
+
+                .navbar-nav{ 
+                    padding: 20px 15px;
+                    .nav-item{
+                        .nav-link{
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            flex-direction: row; gap: 10px; 
+                            // .icons{margin-right: 10px;} 
+                            
+                        }
+                        &:nth-child(2){
+                            .link-text{margin-left: 5px;}
+                        }
+                        &:nth-child(3){
+                            .link-text{margin-left: 10px;}
+                        }
+                        &:last-child{
+                            .nav-link{
+                                .profile{
+                                    display: inline-block;
+                                }
+                                .link-text{margin-left: 8px;}
+                            }
+                        }
+                    }
+                    .dropdown-menu{
+                        left: 0;right:0;
+                       
+                        .dropdown-item{
+                            padding: 5px 10px; color: $white;
+                            font-size: .875rem; font-family: $mont-med;
+                            &:hover{color: $btn-color;background-color: transparent;}
+                        }
+                    }
+                }
+            } 
+        }  
+    } 
+    // Header Section  End
+
+    // Hero Slider Section Start
+    .hero-slider{
+        .myslider{
+            .slick-arrow{display: none!important}
+            .slick-dots li button:before{
+                font-size: .7rem;  
+            }
+        }
+    }
+    // Hero Slider Section 
+
+    // Book Events Now Sectiion Start
+    .book-events{
+        .book-heading{
+            padding-top: 40px;
+            .main-heading{
+                font-size: 1.125rem; 
+            }
+            .sub-heading{
+                font-size: .75rem; 
+            }
+            .store-btn{
+                flex-wrap: wrap;
+                margin: 30px 0; gap: 10px;
+                .img-fluid{width: 70%;}
+            }
+        }
+        .iphone{
+            margin: 30px 0 -100px;;
+        }
+    }
+    // Book Events Now Sectiion End
+    
+    // Event Category Section Start
+    .event-category{
+        .event-heading{
+            .heading{ 
+                &::before{width: 35px;}
+                &::after{width: 20px;left: 40px;}
+            }
+        }
+        .card{
+            .card-body{
+                .card-title{font-size: 1rem;line-height: 25px;}
+            }
+            .cat-img{
+                width: 30%;
+            }
+        }
+    }
+    // Event Category Section End
+
+    // Popular, Recommended, Nearby, Featrued,  Events Section Start
+    .popular-event, .recommended-event, .nearby-event, .featured-event{
+        .event-heading{
+            .heading{ 
+                &::before{width: 35px;}
+                &::after{width: 20px;left: 40px;}
+            }         
+        }
+    }
+    // Popular, Recommended, Nearby, Featrued,  Events Section End
+
+    // Featured Organizers Section Srart
+    .featured-organizers{
+        .event-heading{
+            .heading{ 
+                &::before{width: 35px;}
+                &::after{width: 20px;left: 40px;}
+            }                       
+        }
+        .card{
+            .card-body{
+                .card-title, .card-text{font-size: .875rem;}
+                .btn-follow{
+                    padding: 8px 20px;font-size: .875rem;
+                }
+            }
+        }
+    }
+    // Featured Organizers Section End
+
+    // Footer Section Start
+    .footer{
+        .about{
+            .img-fluid{width: 40%;}
+        }
+        .foot-heading{
+            font-size: .875rem; 
+        }
+        .btn{
+            padding: 8px 20px;font-size: .875rem;
+        }
+    }
+    // Footer SEction End
+
+    // My profile page start
+    .myprofile{
+        
+        .tab-content{
+            .tab-pane{
+                .profile{
+                    &.signUp{background-color: unset;height: unset;}
+                    .form-sec{
+                        padding: 0 20px;
+                        .form{ 
+                            width: 100%;
+                            .form-group{
+                                label{
+                                    left: 25px;color: $black;               
+                                }
+                                .form-control{
+                                    background-color: $input;
+                                    padding-left: 20px; color: $black
+                                }
+                            }
+                            .heading{
+                                font-size: .875rem;
+                                .btn-link{
+                                    font-size: .75rem;
+                                }
+                            }
+                            #upBtns{
+                                margin-bottom: 20px;
+                                .btn{
+                                    font-size: .875rem;
+                                    padding: 8px 25px;
+                                }
+                            }
+                        }
+    
+                    }
+                }
+            }
+        }
+    }
+    // My Profile Page End
+
+    // Sign Up, In and activate account
+    .signUp{
+        padding-bottom: 20px; 
+        .form-sec{
+            padding: 30px 0;
+            .logo-link{
+                margin: 0 0 20px 0;
+                .logo-img{width: 60%;}
+                .top-link{color: $white;font-size: .75rem;}
+            }
+            .booket{
+                width: 100%;
+                .heading{
+                    color: $white; font-size: 1rem;
+                }
+                .signUp-mode{
+                    justify-content: center; ;
+                    .btn{
+                         padding: 9px 30px; width: auto;   
+                         font-size: .75rem;                     
+                    } 
+                    .link{
+                        background-color: #EAEAEA;  border-radius: 50%;
+                        padding: 6px 12px;text-align:center;
+                        img{width: 75%;}
+                    }
+                } 
+                .varify{
+                    
+                    .back-link{
+                        font-size: .875rem; 
+                        .bi{font-size: 1rem}
+                    }
+                }
+            }
+            .divider{width: 100%;}
+            .form{
+                width: 100%;
+                .form-group{
+                    label{
+                        font-size: .875rem;top: 16px;
+                    }
+                    .bi{top: 10px;}
+                    .btn{
+                        padding: 10px 30px;font-size: .875rem;;
+                    }
+                    .form-control{height: 50px;}
+                }
+                .forget-link{
+                    font-size: .875rem;margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    // All event page start
+    .events-page{
+        .all-events{
+            .nav-item{
+                margin-bottom: 10px;
+                .nav-link{
+                    margin: 0 4px; border-radius: 22px;
+                    padding: 8px 15px; font-size: .875rem;
+                }
+            }
+            .nav1{
+                .nav-item{
+                    &:nth-child(2){padding-right:0px;}
+                    .nav-link{padding-left: 10px;}
+                } 
+            }
+            .nav-pills{
+                padding: 0 10px;
+                .nav-link{
+                    .input-group{
+                        margin-bottom: 8px;
+                        .form-control{
+                            padding: 20px 30px;
+                            border-radius: 10px;
+                        }
+                        .btn{
+                            position: absolute;top: 0; left:0px;z-index: 10;
+                            &:focus{box-shadow: none;outline: none;}
+                        }
+                    }
+                }
+                .location{
+                    width: 100%; justify-content: center;
+                    .btns{
+                        .btn{
+                             padding: 3px 7px;
+                            .bi{font-size: 1rem;}
+                            
+                        }
+                    }
+                }
+                
+            }            
+        }
+    }
+    // All event page start
+
+    
+    // Organizers-info Page start
+    .organizers-info, .myprofile{  
+        
+        .head-sec{
+            .card{  
+                .card-body{
+                    padding: 50px 20px 20px;
+                    
+                    .card-title{
+                        font-size: 1.125rem; 
+                    }
+                    .card-text{font-size:.75rem;}
+                    .btns{ 
+                        .btn{
+                            padding: 8px 30px; font-size: .75rem;
+                        }
+                    }
+                }
+                .logo{top: -55px;left: 30px;width: 16%;}
+            }
+        }
+
+        // Information and Events Tab
+        .info-tabs{
+            // tab pills and buttons
+            .nav-pills{ 
+                gap: 10px; 
+                .nav-link{
+                    font-size: .8rem; padding: 6px 15px;
+                }
+            }
+
+            // tab contents
+            .tab-content{
+                .tab-pane{
+                    &.card-events{padding-bottom: 20px;}
+                    // About
+                    .info-text{
+                        font-size: .875rem; line-height: 26px; 
+                    }
+                }
+            }
+            
+        }
+    }
+    // Organizers-info Page End
+}
+
+@media screen and (max-width:500px){
+    // Organizers-info Page start
+    .organizers-info, .myprofile{  
+        .head-sec{
+            .card{  
+                .card-body{
+                    padding: 40px 20px 20px;
+                    
+                    .card-title{
+                        font-size: 1rem; 
+                    }
+                    .card-text{font-size:.75rem;}
+                    .btns{ 
+                        .btn{
+                            padding: 8px 30px; font-size: .75rem;
+                        }
+                    }
+                }
+                .logo{top: -50px;left: 20px;width: 16%;}
+            }
+        }
+
+        // Information and Events Tab
+        .info-tabs{
+            // tab pills and buttons
+            .nav-pills{ 
+                gap: 10px; 
+                .nav-link{
+                    font-size: .8rem; padding: 6px 15px;
+                }
+            }
+
+            // tab contents
+            .tab-content{
+                .tab-pane{
+                    &.card-events{padding-bottom: 20px;}
+                    // About
+                    .info-text{
+                        font-size: .75rem; line-height: 22px; 
+                    }
+                }
+            }
+            
+        }
+    }
+    // Organizers-info Page End
+
+    // All event page start
+    .events-page{
+        .bread{
+            @include breadcrumb;
+                .breadcrumb-item{
+                    font-size: .875rem;
+                    .link{font-size: .875rem;}
+                }
+                .count{font-size: .75rem;}
+            
+        }
+        .all-events{
+            .nav-item{
+                margin-bottom: 10px;
+                .nav-link{
+                    margin: 0 4px; border-radius: 22px;
+                    padding: 6px 10px; font-size: .75rem;
+                }
+            }
+            .nav1{
+                .nav-item{
+                    &:nth-child(2){padding-right:0px;}
+                    .nav-link{padding-left: 10px;}
+                } 
+            }
+            .nav-pills{
+                padding: 0 10px;
+                .nav-link{
+                    .input-group{
+                        margin-bottom: 8px;
+                        .form-control{
+                            padding: 20px 30px;
+                            border-radius: 10px;
+                        }
+                        .btn{
+                            position: absolute;top: 0; left:0px;z-index: 10;
+                            &:focus{box-shadow: none;outline: none;}
+                        }
+                    }
+                }
+                .location{
+                    width: 100%; justify-content: center;
+                    .btns{
+                        .btn{
+                             padding: 3px 7px;
+                            .bi{font-size: 1rem;}
+                            
+                        }
+                    }
+                }
+                
+            } 
+            .side-bar{
+                #sideBar-toggle{
+                    margin-right: 5px;
+                     padding: 2px 6px; display: none;
+                     .bi{font-size: 1.125rem;}
+                     
+                  }
+            }           
+        }
+    }
+    // All event page start
+}
+
+@media screen and (max-width:424px){
+       // Header Section start
+    .header{
+        .navbar {
+            .navbar-collapse{
+                .form{
+                    .label{font-size: .625rem;}
+                    .form-control{height: 15px;font-size: .625rem;;  
+                    }
+                    .btn-search{
+                        padding: 8px 5px;  
+                        .img-fluid{width: 65%;} 
+                    }
+                }
+
+                
+            } 
+        }
+        
+        
+    } 
+    // Header Section  End      
+
+    // Book Events Now Sectiion Start
+    .book-events{
+        .book-heading{
+            padding-top: 40px;
+            .main-heading{
+                font-size: 1rem; 
+            }
+            .sub-heading{
+                font-size: .7rem; 
+            }
+            .store-btn{
+                flex-wrap: wrap;
+                margin: 30px 0; gap: 10px;
+                .img-fluid{width: 50%;}
+            }
+        }
+        .iphone{
+            margin: 30px 0 -100px;;
+        }
+    }
+    // Book Events Now Sectiion End
+
+    // Event Category Section Start
+    .event-category{
+        .event-heading{
+            .heading{font-size: 1.125rem}
+            .view-all{font-size: .75rem}
+        }
+        .card{
+            .card-body{
+                .card-title{font-size: 1rem;line-height: 20px;}
+            }
+            .cat-img{
+                width: 35%;
+            }
+        }
+    }
+    // Event Category Section End
+
+    // Popular, Recommended, Nearby, Featrued,  Events Section Start
+    .popular-event, .recommended-event, .nearby-event, .featured-event{
+        .event-heading{
+            .heading{ font-size: 1.125rem;}            
+            .view-all{ font-size: .75rem;}            
+        }
+        .card{    
+            .card-body{
+                .card-title{font-size: .9rem;line-height: 20px;}
+            }
+        }
+    }
+    // Popular, Recommended, Nearby, Featrued,  Events Section End
+
+    // Featured Organizers Section Srart
+    .featured-organizers{
+        .event-heading{
+            .heading{ font-size: 1.125rem;}            
+            .view-all{ font-size: .75rem;}            
+        }
+    }
+    // Featured Organizers Section End
+
+    .organizers-info, .myprofile{  
+        .head-sec{
+            .card{ 
+                .card-body{
+                    padding: 40px 20px 20px;
+                }
+                .logo{
+                    top: -45px;width: 18%;
+                }
+             }
+        }
+    }
+}
+
+
+@media screen and (max-width:375px){
+    .organizers-info, .myprofile{  
+        .head-sec{
+            .card{ 
+                .card-body{
+                    padding: 30px 20px 20px;
+                }
+                .logo{
+                    top: -40px;width: 18%;
+                }
+             }
+        }
+    }
+}
+
+@media screen and (max-width:320px){
+    .organizers-info, .myprofile{  
+        .head-sec{
+            .card{ 
+                .card-body{
+                    padding: 30px 20px 20px;
+                }
+                .logo{
+                    top: -40px;width: 20%;
+                }
+             }
+        }
+    }
+}

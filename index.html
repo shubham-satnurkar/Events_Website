@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/svg" href="img/svg-icon/logo.svg">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.min.css" />
+  <link rel="stylesheet" href="css/slick-theme.min.css" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="scss/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <title>Event Landing Page</title>
+</head>
+
+<body>
+
+  <!-- Header Section Start -->
+  <header class="header w-100 fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="w-100">
+          <nav class="navbar navbar-expand-lg ">
+            <a class="navbar-brand pr-3" href="index.html">
+              <img src="img/svg-icon/logo.svg" alt="logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">
+                <!-- <i class="bi bi-list"></i> -->
+              </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <form class="form">
+                <div class="form-row align-items-center">
+                  <div class="col">
+                    <label class="label" for="inlineFormInputDate">Date</label>
+                    <input type="text" class="form-control" id="inlineFormInputDate" placeholder="I Want to go out?"
+                      aria-label="Search">
+                  </div>
+                  <div class="col">
+                    <label class="label" for="inlineFormInputGroupLocation">Location</label>
+                    <input type="text" class="form-control" id="inlineFormInputGroupLocation"
+                      placeholder="My current location" aria-label="Search">
+                  </div>
+                  <div class="col">
+                    <label class="label" for="inlineFormInputGroupLookingFor">Looking for</label>
+                    <input type="text" class="form-control" id="inlineFormInputGroupLookingFor"
+                      placeholder="What are you in the mood for?" aria-label="Search">
+                  </div>
+                  <div class="col-auto">
+                    <button type="submit" class="btn btn-search">
+                      <img src="img/svg-icon/search-icon.svg" alt="search-icon" class="img-fluid">
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <ul class="navbar-nav ml-lg-auto align-items-center">
+                <li class="nav-item signIn">
+                  <a class="nav-link" href="signIn.html">
+                    Sign in
+                  </a>
+                </li>
+                <li class="nav-item signup">
+                  <a class="btn " role="button" href="signUp.html">
+                    Sign up
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header Section End -->
+
+  <!-- Hero Slider Section Start -->
+  <section class="hero-slider overflow-hidden">
+    <div class="container container-fluid">
+      <div class="row">
+        <div class="col px-0 px-sm-3">
+          <div class="myslider">
+            <div class="slide">
+              <img src="img/slider-1.jpg" alt="slider-1" class="img-fluid">
+            </div>
+            <div class="slide">
+              <img src="img/slider-2.jpg" alt="slider-2" class="img-fluid">
+            </div>
+            <div class="slide">
+              <img src="img/slider-3.jpg" alt="slider-3" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero Slider Section Start -->
+
+  <!-- Event Category Section Start -->
+  <section class="event-category">
+    <div class="container">
+      <div class="w-100 event-heading px-1">
+        <h3 class="heading">
+          Event Category
+        </h3>
+        <a href="event-category.html" class="view-all">View All</a>
+      </div>
+      <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 row-cols-1">
+        <div class="col  mb-3 category-block">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Music</h4>
+              <h6 class="card-subtitle">24 Events Nearby</h6>
+              <a href="#" class="btn ">
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <img src="img/svg-icon/music.svg" class="cat-img" alt="music-img">
+          </div>
+        </div>
+        <div class="col  mb-3 category-block">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Business & Startups</h4>
+              <h6 class="card-subtitle">36 Events Nearby</h6>
+              <a href="#" class="btn ">
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <img src="img/svg-icon/startup.svg" class="cat-img" alt="startup-img">
+          </div>
+        </div>
+        <div class="col  mb-3 category-block">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Arts & Culture</h4>
+              <h6 class="card-subtitle">36 Events Nearby</h6>
+              <a href="#" class="btn ">
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <img src="img/svg-icon/art&culture.svg" class="cat-img" alt="art&culture-img">
+          </div>
+        </div>
+        <div class="col  mb-3 category-block">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Film & Media</h4>
+              <h6 class="card-subtitle">36 Events Nearby</h6>
+              <a href="#" class="btn ">
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <img src="img/svg-icon/film&media.svg" class="cat-img" alt="film&media-img">
+          </div>
+        </div>
+        <div class="col  mb-3 category-block">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Food & Drink</h4>
+              <h6 class="card-subtitle">36 Events Nearby</h6>
+              <a href="#" class="btn ">
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <img src="img/svg-icon/food&drink.svg" class="cat-img" alt="food&drink-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Event Category Section End -->
+
+  <!-- Popular Event Section Start -->
+  <section class="popular-event card-events">
+    <div class="container">
+      <div class="w-100 event-heading px-1">
+        <h3 class="heading"> Popular Event</h3>
+        <a href="all-events.html" target="_blank" class="view-all">View All</a>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+          <div class="card">
+            <div class="thumbnail">
+              <img src="img/food-festival.jpg" class="card-img-top" alt="food-festival">
+
+              <div class="like-cir">
+                <img src="img/svg-icon/heart.svg" alt="heart" class="heart">
+                <img src="img/svg-icon/heart-fill.svg" alt="heart-fill" class="heart-fill">
+              </div>
+              <a href="javascript:void(0)" class="btn share-btn">
+                <img src="img/svg-icon/share.svg" alt="share-icon">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <h6 class="card-subtitle ">Sun, Nov 15, 11:00 AM</h6>
+              <h5 class="card-title">Great Qatar Food Festival</h5>
+              <p class="card-text text-muted">Mosman Park, Sydney</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+          <div class="card">
+            <div class="thumbnail">
+              <img src="img/boat-show.jpg" class="card-img-top" alt="boat-show">
+
+              <div class="like-cir">
+                <img src="img/svg-icon/heart.svg" alt="heart" class="heart">
+                <img src="img/svg-icon/heart-fill.svg" alt="heart-fill" class="heart-fill">
+              </div>
+              <a href="javascript:void(0)" class="btn share-btn">
+                <img src="img/svg-icon/share.svg" alt="share-icon">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <h6 class="card-subtitle ">Sun, Nov 15, 11:00 AM</h6>
+              <h5 class="card-title">QAWARIB Qatar International Boat Show 2021</h5>
+              <p class="card-text text-muted">The Pearl Qatar</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+          <div class="card">
+            <div class="thumbnail">
+              <img src="img/comm-bank.jpg" class="card-img-top" alt="comm-bank">
+
+              <div class="like-cir">
+                <img src="img/svg-icon/heart.svg" alt="heart" class="heart">
+                <img src="img/svg-icon/heart-fill.svg" alt="heart-fill" class="heart-fill">
+              </div>
+              <a href="javascript:void(0)" class="btn share-btn">
+                <img src="img/svg-icon/share.svg" alt="share-icon">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <h6 class="card-subtitle ">Sun, Nov 15, 11:00 AM</h6>
+              <h5 class="card-title">Commercial Bank CHI Al SHAQAB Presented by Longines</h5>
+              <p class="card-text text-muted">Al Shaqab</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+          <div class="card">
+            <div class="thumbnail">
+              <img src="img/culture-vilage.jpg" class="card-img-top" alt="culture-vilage">
+
+              <div class="like-cir">
+                <img src="img/svg-icon/heart.svg" alt="heart" class="heart">
+                <img src="img/svg-icon/heart-fill.svg" alt="heart-fill" class="heart-fill">
+              </div>
+              <a href="javascript:void(0)" class="btn share-btn">
+                <img src="img/svg-icon/share.svg" alt="share-icon">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <h6 class="card-subtitle ">Sun, Nov 15, 11:00 AM</h6>
+              <h5 class="card-title">Tasty Street Qatar at Katara Cultural Village</h5>
+              <p class="card-text text-muted">Al Gannas </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Popular Event Section End -->
+
+  <!-- Featured Events Section Start -->
+  <section class="featured-event card-events">
+    <div class="container">
+      <div class="w-100 event-heading px-1">
+        <h3 class="heading"> Featured Events</h3>
+        <a href="all-events.html" target="_blank" class="view-all">View All</a>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+          <div class="card">
+            <div class="thumbnail">
+              <img src="img/qatar-museum.jpg" class="card-img-top" alt="qatar-museum">
+
+              <div class="like-cir">
+                <img src="img/svg-icon/heart.svg" alt="heart" class="heart">
+                <img src="img/svg-icon/heart-fill.svg" alt="heart-fill" class="heart-fill">
+              </div>
+              <a href="javascript:void(0)" class="btn share-btn">
+                <img src="img/svg-icon/share.svg" alt="share-icon">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <h6 class="card-subtitle ">Sun, Nov 15, 11:00 AM</h6>
+              <h5 class="card-title">Qatar Museum Tour</h5>
+              <p class="card-text text-muted"> Doha, Qatar</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+          <div class="card">
+            <div class="thumbnail">
+              <img src="img/champion-tour.jpg" class="card-img-top" alt="champion-tour">
+
+              <div class="like-cir">
+                <img src="img/svg-icon/heart.svg" alt="heart" class="heart">
+                <img src="img/svg-icon/heart-fill.svg" alt="heart-fill" class="heart-fill">
+              </div>
+              <a href="javascript:void(0)" class="btn share-btn">
+                <img src="img/svg-icon/share.svg" alt="share-icon">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <h6 class="card-subtitle ">Sun, Nov 15, 11:00 AM</h6>
+              <h5 class="card-title">Longines Global Champions Tour - Doha</h5>
+              <p class="card-text text-muted">Blue Mountains, NSW</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+          <div class="card">
+            <div class="thumbnail">
+              <img src="img/qatar-sport.jpg" class="card-img-top" alt="qatar-sport">
+
+              <div class="like-cir">
+                <img src="img/svg-icon/heart.svg" alt="heart" class="heart">
+                <img src="img/svg-icon/heart-fill.svg" alt="heart-fill" class="heart-fill">
+              </div>
+              <a href="javascript:void(0)" class="btn share-btn">
+                <img src="img/svg-icon/share.svg" alt="share-icon">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <h6 class="card-subtitle ">Sun, Nov 15, 11:00 AM</h6>
+              <h5 class="card-title">Qatar Sports and Educational Tour</h5>
+              <p class="card-text text-muted">Surry Hills, Qatar</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+          <div class="card">
+            <div class="thumbnail">
+              <img src="img/camal-race.jpg" class="card-img-top" alt="camal-race">
+
+              <div class="like-cir">
+                <img src="img/svg-icon/heart.svg" alt="heart" class="heart">
+                <img src="img/svg-icon/heart-fill.svg" alt="heart-fill" class="heart-fill">
+              </div>
+              <a href="javascript:void(0)" class="btn share-btn">
+                <img src="img/svg-icon/share.svg" alt="share-icon">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <h6 class="card-subtitle ">Sun, Nov 15, 11:00 AM</h6>
+              <h5 class="card-title">Shaikh faisal Camal Race track</h5>
+              <p class="card-text text-muted">Surry Hills, Qatar </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Featured Events Section End -->
+
+  <!-- Book Events Now Section Start -->
+  <section class="book-events ">
+    <div class="container">
+      <div class="row ">
+        <div class="col-7 book-heading">
+          <h2 class="main-heading">Book your events now</h2>
+          <h6 class="sub-heading">The perfect event booking app for you.</h6>
+          <div class="store-btn">
+            <a href="javascript:void(0)">
+              <img src="img/svg-icon/app-store.svg" alt="app-store" class="img-fluid ">
+            </a>
+            <a href="javascript:void(0)">
+              <img src="img/svg-icon/play-store.svg" alt="app-store" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-5">
+          <figure class="iphone">
+            <img src="img/iphone.png" alt="iphone-img" class="img-fluid w-75">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Book Events Now Section End -->
+
+
+  <!-- Footer Section Start -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 mb-3 about">
+          <img src="img/svg-icon/foot-logo.svg" class="img-fluid" alt="footer-logo">
+          <h6 class="foot-heading">Are you an event company? </h6>
+          <a href="javascript:void(0)" class="btn">Join Us</a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 mb-3 quick-links">
+          <h6 class="foot-heading">Quick Link</h6>
+          <ul class="list-unstyled foot-link">
+            <li class="list-item"><a href="javascript:void(0)" class="nav-link">About Us</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="nav-link">Partners</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="nav-link">Contact us</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="nav-link">Privacy Policy</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="nav-link">Terms of service</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="nav-link">Warranty policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 mb-3 d-flex flex-column get-in-touch">
+          <h6 class="foot-heading">Get in Touch</h6>
+          <a href="javascript:void(0)" class="contact-link">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Sherin Tower 857, Sydney </span>
+          </a>
+          <a href="javascript:void(0)" class="contact-link">
+            <i class="bi bi-envelope-fill"></i>
+            <span>info@booket.com </span>
+          </a>
+          <a href="javascript:void(0)" class="contact-link">
+            <i class="bi bi-telephone-fill"></i>
+            <span>+91-9876543210 </span>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-5 col-sm-6 mb-3 follow-us">
+          <h6 class="foot-heading">Follow us</h6>
+          <div class="social">
+            <a href="javascript:void(0)" class="icon"><i class="bi bi-instagram"></i></a>
+            <a href="javascript:void(0)" class="icon mx-3"><i class="bi bi-twitter"></i></a>
+            <a href="javascript:void(0)" class="icon"><i class="bi bi-facebook"></i></a>
+          </div>
+          <h6 class="foot-heading">Download App</h6>
+          <div class="store-btn">
+            <a href="javascript:void(0)">
+              <img src="img/svg-icon/app-store.svg" alt="app-store" class="img-fluid ">
+            </a>
+            <a href="javascript:void(0)">
+              <img src="img/svg-icon/play-store.svg" alt="app-store" class="img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="javascript:void(0)" class="scroll-top-btn">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </a>
+  <!-- Footer Section End -->
+
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
