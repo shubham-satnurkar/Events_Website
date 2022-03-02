@@ -46,17 +46,18 @@
                         </div>
                     </div>
                     <!-- Activate Acccount form -->
-                    <form class="form" action="signIn.html">
+                    <form class="form" action="signIn.html" onsubmit="return actFrom()" novalidate>
                         <div class="form-group">
-                            <label class="form-label" class="lab" for="email">Email ID</label>
+                            <label class="form-label" class="lab" for="actEmail">Email ID</label>
                             <i class="bi bi-envelope-fill"></i>
-                            <input type="email" class="form-control" id="email">
+                            <input type="email" class="form-control" id="actEmail" onblur="actEmailValid()">
+                            <small id="actErr1" class="form-text text-danger ml-1"></small>
                         </div>
                         <div class="form-group">
-                            <label class="form-label" class="lab" for="password"> OTP</label>
-                            
+                            <label class="form-label" class="lab" for="actOTP"> OTP</label> 
                             <i class="bi bi-lock-fill"></i>
-                            <input type="password" class="form-control" id="password" placeholder="_ _ _ _ _ _">
+                            <input type="text" class="form-control" id="actOTP" placeholder="_ _ _ _ _ _" onblur="actOTPValid()">
+                            <small id="actErr2" class="form-text text-danger ml-1"></small>
                         </div>
                         <div class=" d-flex justify-content-md-end  justify-content-center">
                            <h6 class="mr-2 text-md-dark text-white"> Not received?</h6>
@@ -83,7 +84,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/custom.js"></script>
-
+    <script src="js/formValidation.js"></script>
 
 </body>
 

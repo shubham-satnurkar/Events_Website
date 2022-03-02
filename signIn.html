@@ -59,16 +59,18 @@
                         <hr>
                     </div>
                     <!-- Sign in  form -->
-                    <form class="form" action="home.html">
+                    <form class="form" action="home.html" onsubmit="return singIn()"  novalidate>
                         <div class="form-group">
-                            <label class="form-label"  for="email">Email ID</label>
+                            <label class="form-label"  for="inEmail" >Email ID</label>
                             <i class="bi bi-envelope-fill"></i>
-                            <input type="email" class="form-control" id="email">
+                            <input type="email" class="form-control" id="inEmail" onblur="Evalidate()">
+                            <small id="emailErr" class="form-text text-danger ml-1"></small>
                         </div>
                         <div class="form-group">
-                            <label class="form-label"  for="password"> Password</label>
+                            <label class="form-label"  for="inPassword"> Password</label>
                             <i class="bi bi-lock-fill"></i>
-                            <input type="password" class="form-control" id="password">
+                            <input type="password" class="form-control" id="inPassword" onblur="Pvalidate()">
+                            <small id="passErr" class="form-text text-danger ml-1"></small>
                         </div>
                         <a href="javascript:void()" class="forget-link">Forgot Password?</a>
                         <div class="form-group text-md-right text-center">
@@ -92,7 +94,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/custom.js"></script>
-
+    <script src="js/formValidation.js"></script>
 
 </body>
 
