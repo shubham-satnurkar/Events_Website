@@ -29,11 +29,12 @@ $(document).ready(function () {
     $('html, body').animate({
       scrollTop: 0
     }, 1000)
-  })
+  });
+
 
   // When click on Events Cards Like and Deslike heart color change and Wishlist Count Increase and Descrease.
   var likeCount = 0;
-  $('.card-events .card').click(function () {
+  $('.card-events .card .like-cir').click(function () {
 
     $(this).toggleClass('like');
 
@@ -49,7 +50,10 @@ $(document).ready(function () {
     }
 
   });
+  
 
+
+  
   // Notification Toggler
   $('.notify .icons').click(function () {
     $('.notification-toggle').toggle();

@@ -1,4 +1,4 @@
-.like .thumbnail .like-cir .heart {
+.like .heart {
   visibility: hidden;
 }
 
@@ -45,6 +45,10 @@
   -webkit-box-shadow: none;
           box-shadow: none;
   font-family: Montserrat-Medium;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-right: 10px;
 }
 
 .header .navbar .navbar-collapse .form .form-control::-webkit-input-placeholder {
